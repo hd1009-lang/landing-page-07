@@ -1,0 +1,117 @@
+.reason-choose {
+  background-color: #F3F7FA;
+  border-radius   : 20px;
+  margin          : 126px 134px 100px;
+  padding         : 56px 81px 58px;
+  text-align      : center;
+
+  .question {
+    display       : inline-block;
+    font-style    : normal;
+    font-weight   : 700;
+    font-size     : 50px;
+    line-height   : 69px;
+    letter-spacing: -0.03em;
+    margin-bottom : 28px;
+
+  }
+
+  .list-reason {
+    @include flex(space-between,center,row,flex,wrap);
+    .reason {
+      background   : #FFFFFF;
+      border-radius: 20px;
+      @include flex(flex-start,flex-start);
+      margin-top: 41px;
+      height    : 241px;
+      padding   : 60px 38px 37px 30px ;
+      max-width : calc(50% - 40px);
+      text-align: left;
+      
+      &-color {
+        border-radius: 50%;
+        min-height   : 58px;
+        min-width    : 58px;
+        max-width    : 58px;
+        margin-right : 32px;
+    
+      }
+
+      &-info {
+        .reason-name {
+          font-weight  : 800;
+          font-size    : 24px;
+          line-height  : 33px;
+          margin-bottom: 22px;
+        }
+
+        .reason-description {
+          color         : #757095;
+          font-weight   : 400;
+          font-size     : 18px;
+          line-height   : 30px;
+          letter-spacing: -0.02em;
+        }
+      }
+    }
+
+    .reason:nth-child(1) {
+      .reason-color {
+        background-color: #F7ECFD;
+      }
+    }
+    .reason:nth-child(2) {
+      .reason-color {
+        background-color: #D8F5F1;
+      }
+    }
+    .reason:nth-child(3) {
+      .reason-color {
+        background-color: #D9F1FD;
+      }
+    }
+    .reason:nth-child(4) {
+      .reason-color {
+        background-color: #FFE4E3;
+      }
+    }
+  }
+  @media (max-width:1400px) {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    .list-reason {
+      .reason {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  @media (max-width:948px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    .list-reason {
+      .reason {
+        max-width : calc(50% - 20px);
+      }
+    }
+  }
+
+  @media (max-width:756px) {
+    .list-reason {
+      flex-direction: column;
+      .reason {
+        height: fit-content;
+        align-items: center;
+        flex-direction: column;
+        max-width: 80%;
+        text-align: center;
+
+        &-color {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+}

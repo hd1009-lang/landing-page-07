@@ -1,0 +1,66 @@
+.related-companies {
+  @include flex(center,center,column);
+  margin:72px 185px 114px;
+
+  &-overview {
+    font-weight: 400;
+    font-size  : 22px;
+    line-height: 30px;
+    margin-bottom: 36px;
+
+  }
+
+  &-list {
+    @include flex(space-between,center,row,flex,wrap);
+    width: 100%;
+
+  }
+
+  @media (max-width:1400px) {
+    margin: 72px 10px;
+    text-align: center;
+
+    &-overview {
+      font-size  : 20px;
+
+    }
+
+  }
+
+  @media (max-width:968px) {
+    margin:10px;
+
+    &-overview {
+      font-size  : 18px;
+      margin-bottom: 10px;
+
+    }
+
+    &-list {
+      justify-content: flex-start;
+      .item-company {
+        @include flex(center,center);
+        margin: 20px;
+        width: calc(33.33% - 40px);
+
+      }
+    }
+  }
+
+  @media (max-width:482px) {
+    margin: 50px 10px;
+
+    &-overview {
+      font-size  : 15px;
+
+    }
+
+    &-list {
+      .item-company {
+        margin: 12px;
+        width: calc(50% - 30px);
+
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.footer {
+  background-color: #1B1C31;
+  color           : #fff;
+  padding         : 111px 105px 23px 120px;
+  width           : 100%;
+
+  &-content {
+    margin-bottom: 195px;
+    @include flex(flex-start,flex-start);
+    &-left {
+      max-width: 520px;
+      margin-right: 116px;
+      .content-left-header {
+        font-weight   : 700;
+        font-size     : 20px;
+        line-height   : 27px;
+        margin-bottom : 18px;
+        margin-top    : 12px;
+        text-transform: uppercase;
+
+      }
+      .content-left-description {
+        font-weight: 500;
+        font-size  : 16px;
+        line-height: 26px;
+        opacity    : 0.4;
+      }
+    }
+
+    &-right {
+      width: fit-content;
+      @include flex(center,center);
+      .footer-content-col {
+        .col-header {
+          font-weight  : 700;
+          font-size    : 21px;
+          line-height  : 24px;
+          margin-bottom: 35px;
+       
+        }
+        &:nth-child(1) {
+          margin-right: 102px;
+        }
+        &:nth-child(2) {
+          margin-right: 40px;
+        } 
+        .col-list {
+          .col-content {
+            color        : #fff;
+            display      : inline-block;
+            font-weight  : 500;
+            font-size    : 16px;
+            line-height  : 24px;
+            margin-bottom: 18px;
+          }
+        }
+      }
+    }
+  }
+  &-copyright {
+    @include flex(space-between,center);
+    margin-right: 15px;
+    .content-copyright {
+      font-size  : 12px;
+      line-height: 26px;
+    }
+  }
+
+  @media (max-width:1400px) {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &-content {
+      justify-content: space-around ;
+      &-left {
+        max-width: 40%;
+        margin-right: 50px;
+      }
+      &-right {
+        gap: 40px;
+        .footer-content-col { 
+          .col-header {
+            font-size    : 18px;
+          }
+          &:nth-child(1) {
+            margin-right: inherit;
+          }
+          &:nth-child(2) {
+            margin-right:inherit ;
+          } 
+        }
+      }
+    }
+  }
+
+  @media (max-width:968px) {
+    
+    &-content {
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+      &-left {
+        max-width: 80%;
+        margin-right: 0px;
+      }
+      &-right {
+        width: 100%;
+        text-align: left;
+        gap: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 534px) {
+    &-content {
+      &-right { 
+        gap: 20px;
+        .footer-content-col {
+          font-size    : 15px;
+          .col-list {
+            .col-content {
+              font-size    : 13px;
+            }
+          }
+        }
+      }
+    }
+    &-copyright {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import './base/variable';
+
+// mixin
+@import './mixin/index.scss';
+
+// Components
+@import './components/content-feature';
+
+// Section
+@import './section/navigation';
+@import './section//header';
+@import './section/companies';
+@import './section/content';
+@import './section/register-cta';
+@import './section/testimonails';
+@import './section/cta';
+@import './section/why-choose';
+@import './section/footer-cta';
+@import './section/footer';
+
+@import './default.scss';

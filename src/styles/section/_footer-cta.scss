@@ -1,0 +1,74 @@
+.footer-cta {
+  background-color: $base-color;
+  @include flex(space-between,center);
+  padding: 91px 210px 58px 124px;
+
+  &-left {
+    color    : #fff;
+    max-width: 512px;
+
+    &-heading {
+      font-weight   : 700;
+      font-size     : 14px;
+      line-height   : 19px;
+      margin-bottom : 13px;
+      text-transform: uppercase
+
+    }
+
+    &-title {
+      font-weight   : 800;
+      font-size     : 50px;
+      line-height   : 60px;
+      letter-spacing: -0.03em;
+      margin-bottom : 30px;
+
+    }
+
+    &-description {
+      font-weight   : 400;
+      font-size     : 18px;
+      line-height   : 30px;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &-form {
+    @include flex(flex-start,flex-start,column);
+    max-width: 371px;
+    width: 100%;
+    .form-input {
+      background-color: #F2F3F4;
+      border          : none;
+      border-radius: 5px;
+
+      color: #BBB5E0;
+      
+      height       : 60px;
+      margin-bottom: 24px;
+      outline      : none;
+      opacity: 0.2; 
+      padding      : 0 21px ;
+      width        : 100%;
+      
+    }
+  }
+
+  @media (max-width:1400px) {
+    justify-content: space-around;
+    padding-left: 50px;
+    padding-right: 50px;
+
+  }
+
+  @media (max-width:948px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (max-width:748px) {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}

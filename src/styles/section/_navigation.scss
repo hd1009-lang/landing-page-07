@@ -1,0 +1,105 @@
+.navigation {
+  @include flex(space-between,center);
+  margin: 28px 132px 12.5px 123px;
+  
+  &-name {
+    width: fit-content;
+
+  }
+  &-bar{
+    display: none;
+
+  }
+  &-menu {
+    .icon-times {
+      display: none
+
+    }
+    .menu-list-parent {
+      @include flex(flex-start,center);
+
+      .menu-list-child {
+        cursor     : pointer;
+        @include flex(flex-start,center);
+        margin-right: 27px;
+
+        .icon-menu {
+          margin-left: 12px;
+
+        }
+      }
+    }
+  }
+  &-buttons {
+    .btn-sign {
+      background : none;
+
+      border     : none;
+      outline    : none;
+
+      font-weight: 400;
+      font-size  : 14px;
+      line-height: 19px;
+
+    }
+    .btn-start {
+      border-radius: 7px;
+      height: 52px;
+      margin-left: 51px;
+      width : 137px;
+
+    }
+  }
+
+  @media (max-width:1000px) {
+      margin-left: 10px;
+      margin-right: 10px;
+
+   }
+   @media (max-width:756px) {
+      &-bar {
+        display: block;
+      }
+      &-menu {
+        display: none;
+
+        &.active {
+          display: flex;
+          @include flex(center,center);
+
+        }
+        background-color: #fff;
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+        .icon-times {
+          display: block;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+
+        }
+
+        .menu-list-parent {
+          flex-direction: column;
+
+          .menu-list-child {
+            margin-bottom: 20px;
+            margin-right: 15px;
+
+          }
+        }
+      }
+
+      &-buttons {
+        .btn-start {
+          margin-left: 20px;
+          width : 100px;
+          
+        }
+      }
+   }
+}
