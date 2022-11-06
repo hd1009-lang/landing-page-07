@@ -94,7 +94,6 @@
   }
 
   @media (max-width:968px) {
-    
     &-content {
       align-items: center;
       flex-direction: column;
@@ -109,6 +108,10 @@
         text-align: left;
         gap: 50px;
       }
+    }
+    &-copyright {
+      flex-direction: column;
+      text-align: center;
     }
   }
 
@@ -125,10 +128,6 @@
           }
         }
       }
-    }
-    &-copyright {
-      flex-direction: column;
-      text-align: center;
     }
   }
 }
